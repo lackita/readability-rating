@@ -1,0 +1,9 @@
+<script>
+	var start;
+	start_timer = function () {
+		start = Date.now();
+	}
+	$(document).ready(start_timer);
+	$(document).on('page:load', start_timer);
+</script>
+<button onclick="alert(Date.now() - start);">I Understand This</button>
