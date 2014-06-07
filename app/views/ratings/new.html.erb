@@ -6,4 +6,6 @@
 	$(document).ready(start_timer);
 	$(document).on('page:load', start_timer);
 </script>
-<button onclick="alert(Date.now() - start);">I Understand This</button>
+<%= form_for @rating, :url => {action: :new} do |f| %>
+  <button type="button" onclick="alert(Date.now() - start);">I Understand This</button>
+<% end %>
