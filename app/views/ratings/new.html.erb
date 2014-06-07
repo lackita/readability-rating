@@ -1,11 +1,3 @@
-<script>
-	var start;
-	start_timer = function () {
-		start = Date.now();
-	}
-	$(document).ready(start_timer);
-	$(document).on('page:load', start_timer);
-</script>
 <%= form_for @rating, :url => {action: :new} do |f| %>
   <%= f.button "I Understand This", type: "button", id: "stop_timing" %>
   <%= f.hidden_field :timing %>
