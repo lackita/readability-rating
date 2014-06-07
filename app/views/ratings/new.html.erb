@@ -7,6 +7,6 @@
 	$(document).on('page:load', start_timer);
 </script>
 <%= form_for @rating, :url => {action: :new} do |f| %>
-  <%= f.button "I Understand This", type: "button", id: "stop_timing", onclick: "$('#ratings_timing').val(Date.now() - start);" %>
+  <%= f.button "I Understand This", type: "button", id: "stop_timing" %>
   <%= f.hidden_field :timing %>
 <% end %>
