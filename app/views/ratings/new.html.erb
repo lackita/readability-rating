@@ -7,5 +7,5 @@
 	$(document).on('page:load', start_timer);
 </script>
 <%= form_for @rating, :url => {action: :new} do |f| %>
-  <button type="button" onclick="alert(Date.now() - start);">I Understand This</button>
+  <button type="button" onclick="this.value = Date.now() - start;">I Understand This</button>
 <% end %>
