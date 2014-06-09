@@ -1,4 +1,5 @@
-<%= form_for @rating, :url => {action: :new} do |f| %>
+<%= form_for(@rating) do |f| %>
   <%= f.button "I Understand This", type: "button", id: "stop_timing" %>
   <%= f.hidden_field :timing %>
+  <%= f.submit %>
 <% end %>
