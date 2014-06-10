@@ -1,5 +1,6 @@
+<pre class="prettyprint"><%= @code_sample.text %></pre>
+<br>
 <%= form_for [@code_sample, @rating] do |f| %>
-  <%= f.button "I Understand This", type: "button", id: "stop_timing" %>
+  <%= f.button "I Understand This", id: "stop_timing" %><br>
   <%= f.hidden_field :timing %>
-  <%= f.submit %>
 <% end %>

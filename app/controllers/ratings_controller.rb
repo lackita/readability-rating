@@ -7,7 +7,6 @@ class RatingsController < ApplicationController
   def create
     rating_params = params.require(:rating).permit(:timing)
     rating_params[:code_sample_id] = params[:code_sample_id]
-    debugger
     @rating = Rating.new(rating_params)
     @rating.save
     redirect_to root_path

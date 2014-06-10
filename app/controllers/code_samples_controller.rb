@@ -1,4 +1,8 @@
 class CodeSamplesController < ApplicationController
+  def show
+    @code_sample = CodeSample.find(params[:id])
+  end
+
   def new
     @code_sample = CodeSample.new
   end
