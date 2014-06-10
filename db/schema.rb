@@ -19,17 +19,11 @@ ActiveRecord::Schema.define(version: 20140609232738) do
     t.datetime "updated_at"
   end
 
-  create_table "codesamples", force: true do |t|
-    t.string   "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "ratings", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "timing"
-    t.decimal  "code_sample_id"
+    t.integer  "timing"
+    t.integer  "code_sample_id"
   end
 
 end
