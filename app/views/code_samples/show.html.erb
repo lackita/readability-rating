@@ -1,2 +1,3 @@
 <%= @code_sample.text_block %>
-Average: <%= @code_sample.rating %>
+Average: <%= @code_sample.rating %><br>
+<%= link_to 'Destroy', @code_sample, method: :delete %>

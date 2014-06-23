@@ -10,6 +10,7 @@ class CodeSample < ActiveRecord::Base
   end
 
   def rating
+    return 0 if ratings.length == 0
     ratings.map {|r| r.timing}.sum / ratings.length
   end
 end
