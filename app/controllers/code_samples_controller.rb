@@ -5,6 +5,7 @@ class CodeSamplesController < ApplicationController
 
   def new
     @code_sample = CodeSample.new
+    @tab = "add"
   end
 
   def create

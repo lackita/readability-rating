@@ -2,6 +2,7 @@ class RatingsController < ApplicationController
   def new
     @code_sample = CodeSample.find(params[:code_sample_id])
     @rating = Rating.new(code_sample: @code_sample)
+    @tab = "rate"
   end
 
   def create
@@ -9,6 +10,6 @@ class RatingsController < ApplicationController
     rating_params[:code_sample_id] = params[:code_sample_id]
     @rating = Rating.new(rating_params)
     @rating.save
-    redirect_to root_path
+    redirect_to code_sample_path params[:code_sample_id]
   end
 end
