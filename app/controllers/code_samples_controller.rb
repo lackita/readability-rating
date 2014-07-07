@@ -13,9 +13,4 @@ class CodeSamplesController < ApplicationController
     @code_sample.save
     redirect_to root_path
   end
-
-  def destroy
-    CodeSample.find(params[:id]).destroy
-    redirect_to root_path
-  end
 end
