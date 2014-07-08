@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620111625) do
+ActiveRecord::Schema.define(version: 20140707214054) do
 
   create_table "code_samples", force: true do |t|
     t.text     "text"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140620111625) do
     t.datetime "updated_at"
     t.integer  "timing"
     t.integer  "code_sample_id"
+    t.decimal  "score"
   end
 
 end

@@ -1,6 +1,15 @@
 <pre class="prettyprint"><%= @code_sample.text %></pre>
 <br>
 <%= form_for [@code_sample, @rating] do |f| %>
-  <%= f.button "I Understand This", id: "stop_timing" %><br>
+  <b>I Understand This</b>:
+  <%= f.radio_button :score, 4 %>
+  <%= f.label :score_4, "Completely" %>
+  <%= f.radio_button :score, 3 %>
+  <%= f.label :score_3, "Mostly" %>
+  <%= f.radio_button :score, 2 %>
+  <%= f.label :score_2, "Barely" %>
+  <%= f.radio_button :score, 1 %>
+  <%= f.label :score_1, "Not At All" %><br>
+  <%= f.submit "Rate", id: "stop_timing" %>
   <%= f.hidden_field :timing %>
 <% end %>

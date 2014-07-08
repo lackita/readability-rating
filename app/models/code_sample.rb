@@ -9,8 +9,29 @@ class CodeSample < ActiveRecord::Base
     "<pre class=\"prettyprint\">#{text}</pre>".html_safe
   end
 
-  def rating
-    return 0 if ratings.length == 0
-    (ratings.map {|r| r.timing}.sum / ratings.length) / 1000
+  def timing
+    average(timings) / 1000
+  end
+
+  def score
+    s = average(scores)
+    return "n/a" if s == 0
+    s
+  end
+
+  private
+
+  def average(list)
+    valid_items = list.select {|i| i != nil}
+    return 0 if valid_items.length == 0
+    valid_items.sum / valid_items.length
+  end
+
+  def timings
+    ratings.map {|r| r.timing}
+  end
+
+  def scores
+    ratings.map {|r| r.score}
   end
 end
